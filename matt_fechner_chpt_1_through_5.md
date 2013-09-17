@@ -358,19 +358,18 @@ the Find command (roughly page 108)
 		-- "=" is to set exactly'
 		
 	Directories need pass through permissions
-	-- if you don't have permission for a parent (and all sub-parent) directories, you can't access the file
+	-- if you don't have permission for a parent (and all sub-parent) directories, you can't access the file or directory.
 	
 	-- giving -r permission--
 	file - can look at file contents (ie cat, more, head, tail)
 	directory - can list the filenames
-		you SHOULD give -x permission if you are already giving read permission
+		 -x permission should be given with read
 	-- giving -w permission--
-	file - can be edited and or deleted
-	directory - the directory and it's files can be deleted, you can also add/create files
-		you should add all permissions if the file is writeable
+	file - can be edited
+	directory - the directory it's files can be deleted, you can also add files to the directory
 	-- giving -x permission--
 	file - can be run if it is an executable or a shell script
-	directory - can be accessed (cd, ls-l and run commands on the directory)
+	directory - can be accessed (cd to directory or through it)
 	
 	page 125, to reference a subdirectory or file, you MUST have execute permissions to ALL directories in the absolute path to the file or directory
 	
@@ -448,10 +447,10 @@ all of these can be redirected
 		cd test
 		ls -l will show the new file
 		
-	Output redirection
+	Input redirection
 	ls -l < filelist.txt 
 	
-	> and >> are output redirection operators (LOTS OF STARS BECAUSE THIS WILL BE ON TEST *********)
+	> and >> are Output redirection operators
 	
 	to send a command output to a file rather than the screen
 	command > outfile			--- general use of the command for csh, ksh, and bash
